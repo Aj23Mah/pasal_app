@@ -8,6 +8,8 @@ import ForgetPassword from './Pages/ForgetPassword'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -24,6 +26,18 @@ const App = () => {
           <Route path='/forget-password' element={<ForgetPassword />} />
         </Routes>
       </Router>
+      <ToastContainer
+position="bottom-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
     </>
   )
 }
