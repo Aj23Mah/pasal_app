@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import OAuth from "../Components/OAuth";
 import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
 import { toast } from "react-toastify";
-// import { async } from "@firebase/util";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
