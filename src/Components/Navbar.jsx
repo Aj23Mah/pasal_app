@@ -30,7 +30,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-white border-b shadow-5m sticky top-0 z-50">
+    <div className="bg-white border-b shadow-5m sticky top-0 z-40">
       <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
         <div>
           <img
