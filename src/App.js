@@ -15,6 +15,8 @@ import Error from "./hooks/Error";
 
 import { Shop } from "./Pages/shop/Shop";
 import { Cart } from "./Pages/cart/cart";
+// import Payment from "./Pages/payment/payment"
+import { Payment } from "./Pages/payment/payment";
 import { ShopContextProvider } from "./context/shop-context";
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
+            {/* <Route path="/payment" element={<Payment />} /> */}
+            <Route path="/payment" element={<Payment />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
 

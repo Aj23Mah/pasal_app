@@ -1,0 +1,127 @@
+.contact-section{
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    /* border: 1px solid #2d2d2d; */
+}
+.container{
+    width: 700px;
+    /* border:  1px solid #2d2d2d; */
+    /* box-shadow: 5px 5px lightblue; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-columns: 50% 50%;  */
+    /* justify-content: center; */
+    /* place-items: center; */
+    /* padding: 50px 150px; */
+}
+
+.contact-detail{
+    background-color: #01d28e;
+    color: #fff;
+    padding: 35px;
+}
+.contact-detail h1{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact-detail p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.contact-detail .info{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 10px;
+    font-size: 20px;
+}
+.contact-detail i{
+    font-size: 30px;
+    padding: 5px 0;
+}
+
+.form-detail{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+    background-color: #fff;
+}
+.form-detail h1{
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.form-detail .row{
+    margin: 10px;
+    line-height: 30px;
+}
+.form-detail .row input{
+    width: 100%;
+}
+.form-detail .btn{
+    background-color: #01d28e;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: 600;
+}
+.form-detail .btn:hover{
+    background-color: #0c8059;
+}
+
+
+/* @media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+} */
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        /* margin-top: 50px; */
+        width: 80%;
+        grid-template-columns: 1fr;
+        /* place-items: center; */
+        margin: 150px auto auto auto;
+        /* border: 1px solid black; */
+        /* justify-content: center; */
+    }
+    .contact-detail{
+        width: 100%;
+        place-items: center;
+        /* text-align: center; */
+    }
+    
+    .form-detail{
+        width: 100%;
+        place-items: center;
+    }
+}

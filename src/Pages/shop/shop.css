@@ -1,3 +1,15 @@
+.banner-box{
+    display: grid;
+    place-items: center;
+}
+.banner{
+    width: 65%;
+    height: 200px;
+    margin: 20px;
+    color: #fff;
+    background-color: #6facf6;
+    text-align: center;
+}
 .shopTitle{
     margin: 15px;
     text-align: center;
@@ -7,34 +19,44 @@
     display: flex;
 }
 .category{
-    width: 15%;
+    display: flex;
+    /* flex-grow: 1; */
+    width: 20%;
+    flex-direction: column;
+    margin: 0 20px;
+    text-align: center;
+}
+.category-search{
+    margin-bottom: 5px;
+    width: auto;
+}
+.category-btn button{
+    padding: 10px 10px;
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: rgb(229, 165, 82);
+    color: #fff;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-}
-.category input{
-    padding: 5px 10px;
-    margin-bottom: 5px;
-}
-.category button{
-    padding: 10px 10px;
-    margin-bottom: 4px;
-    font-size: 13px;
-    cursor: pointer;
+    align-items: center;
 }
 .category button:hover{
     color: #fff;
-    background-color: rgb(229, 165, 82);
+    background-color: rgb(177, 128, 63);
 }
 .products{
-    width: 85%;
+    /* flex-grow: 2; */
+    width: 80%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     /* justify-content: center;
     align-items: center; */
-    margin-left: 40px;
+    margin-left: 50px;
     font-size: 15px;
 }
 .product{
@@ -42,7 +64,7 @@
     width: 200px;
     height: 250px;
     margin: 5px;
-    padding: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +75,7 @@
     width: 170px;
     height: 220px;
     object-fit: contain;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .product .description{
     text-align: center;
@@ -66,22 +88,37 @@
     width: 80%;
     padding: 5px 10px;
     cursor: pointer;
+    color: #fff;
+    background-color: rgb(239, 180, 103);
+    /* transition: 0.8s ease-in-out; */
 }
 .addToCartBtn:hover{
     color: #fff;
-    background-color: rgb(230, 139, 20);
+    background-color: rgb(180, 134, 75);
 }  
 
-/* @media screen and (max-width: 480px) {
+@media (max-width: 690px) {
     body {
       background-color: lightgreen;
     }
     .productContainer{
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     .category{
-        display: flex;
-        flex-direction: row;
+        
     }
-  } */
+    .category-search{
+        
+    }
+    .category-btn{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 10px;
+    }
+    .category-btn button{
+        
+    }
+    .products{
+        
+    }
+  }

@@ -13,7 +13,7 @@ const firebaseConfig = {
   messagingSenderId: "575039939553",
   appId: "1:575039939553:web:0b76b867bea42a7a49e8a0"
 };
-
+// url of realtime database: https://pasal-react-default-rtdb.asia-southeast1.firebasedatabase.app/name to be store in .json
 // Initialize Firebase
 initializeApp(firebaseConfig);
 export const db = getFirestore()

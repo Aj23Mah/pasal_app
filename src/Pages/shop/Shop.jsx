@@ -15,34 +15,42 @@ export const Shop = (props) => {
     setSelectedCategory(category);
   };
 
-
   return (
-    <div className="shop">
+    <div className="shop-section">
+      <div className="banner-box">
+        <div className="banner">banner</div>
+      </div>
       <div className="shopTitle">
         <h1> hamroPasal </h1>
       </div>
 
       <div className="productContainer">
         <div className="category">
-          <input
-            type="text"
-            placeholder="search"
-            value={searchQuery}
-            onChange={handleSearchInputChange}
-          />
-          <button onClick={() => setSelectedCategory("")}>All</button>
-          <button onClick={() => handleCategoryButtonClick("pipe & fitting")}>
-            pipe & fitting
-          </button>
-          <button onClick={() => handleCategoryButtonClick("bathroom accessories")}>
-            bathroom
-          </button>
-          <button onClick={() => handleCategoryButtonClick("lock")}>
-            lock
-          </button>
-          <button onClick={() => handleCategoryButtonClick("machine")}>
-            machine
-          </button>
+          <div className="category-search">
+            <input
+              type="text"
+              placeholder="search"
+              value={searchQuery}
+              onChange={handleSearchInputChange}
+            />
+          </div>
+          <div className="category-btn">
+            <button onClick={() => setSelectedCategory("")}>All</button>
+            <button onClick={() => handleCategoryButtonClick("pipe & fitting")}>
+              pipe & fitting
+            </button>
+            <button
+              onClick={() => handleCategoryButtonClick("bathroom accessories")}
+            >
+              bathroom
+            </button>
+            <button onClick={() => handleCategoryButtonClick("lock")}>
+              lock
+            </button>
+            <button onClick={() => handleCategoryButtonClick("machine")}>
+              machine
+            </button>
+          </div>
         </div>
 
         <div className="products">
