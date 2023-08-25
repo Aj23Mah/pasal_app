@@ -12,6 +12,7 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <div className="container">
+        
         <div className="contact-detail">
           <h1>let's get in touch</h1>
           <p>We're open for any suggestion or just to have a chat.</p>
@@ -42,6 +43,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
+
         <div className="form-detail">
           <h1 className="row">Contact Us</h1>
           <form action="https://formspree.io/f/xdovpvjw" method="POST">
@@ -103,6 +105,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
       </div>
     </div>
   );

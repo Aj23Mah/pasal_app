@@ -1,15 +1,50 @@
-.banner-box{
+/* .banner{
     display: grid;
     place-items: center;
-}
-.banner{
-    width: 65%;
-    height: 200px;
-    margin: 20px;
-    color: #fff;
-    background-color: #6facf6;
-    text-align: center;
-}
+    grid-template-columns: 1fr;
+    column-gap: 20px;
+    margin: 40px 40px;
+    height: 40dvh;
+} */
+
+/* .hero-section{ */
+   /* background-image: linear-gradient(rgba(134, 123, 123, 0.5), rgba(211, 197, 197, 0.5),url(https://hardwarepasal.com/src/img/brand//2022-08-04-11-14-33_xl8zX8xqT1_brand.png)); */
+    /* background-color: #ffffff10; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* backdrop-filter: blur(12px); */
+    /* object-fit: contain; */
+    /* -webkit-backdrop-filter: blur(12px); */
+    /* color: #1f1b1b;
+    width: 100%;
+    height: 100%; */
+/* }   */
+
+/* Start the swiper css */
+
+/* .swiper {
+    height: 100%;
+    width: 100%;
+  } */
+  
+  /* .swiper-slide {
+    background: #b13030;
+  
+        // Center slide text vertically
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  /* .swiper-slide img {
+    width: 45%;
+    object-fit: contain;
+  } */
+
+  /* End the swiper css */
+
+
 .shopTitle{
     margin: 15px;
     text-align: center;
@@ -28,7 +63,11 @@
 }
 .category-search{
     margin-bottom: 5px;
-    width: auto;
+    /* width: auto; */
+    
+}
+.category-search input{
+    max-width: 100%;
 }
 .category-btn button{
     padding: 10px 10px;
@@ -98,27 +137,39 @@
 }  
 
 @media (max-width: 690px) {
-    body {
-      background-color: lightgreen;
-    }
     .productContainer{
         flex-direction: column;
     }
     .category{
-        
+        width: 90%;
     }
-    .category-search{
+    /* .category-search{
         
-    }
+    } */
     .category-btn{
         display: grid;
-        grid-template-columns: auto auto auto auto auto;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        padding: 0 40px;
+    }
+    /* .category-btn button{
+        
+    } */
+    .products{
+        margin: auto;
+    }
+    input{
+        max-width: 100%;
+    }
+  }
+  @media (max-width: 525px) {
+    .category-btn{
+        display: grid;
+        grid-template-columns: auto auto;
         gap: 10px;
     }
-    .category-btn button{
-        
-    }
     .products{
-        
+        justify-content: center;
     }
+  
   }

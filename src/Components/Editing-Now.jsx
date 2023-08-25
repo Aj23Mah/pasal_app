@@ -1,3 +1,6 @@
+
+// Editing now 
+
 import React, { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Transition } from "@headlessui/react";
@@ -5,7 +8,7 @@ import { Transition } from "@headlessui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import { useLocation, useNavigate } from "react-router-dom";
-// import logo from '../assets/logo1.png';
+import { logo } from "../assets/logo1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,18 +39,10 @@ const Navbar = () => {
   }
 
   return (
-    // for fixed navbar => className="fixed h-14 w-[100%] m-auto z-10"
     <nav>
-      <div className="flex justify-between items-center h-14 max-w-[100%] mx-auto px-4 bg-white text-black">
-        {/* <div className="flex flex-row h-10 justify-center">
-        <img src={logo} alt="Logo" className="" />
-        <h2 className="text-xl font-bold text-[#6a47ba] justify-center items-center">
-        // w-full text-2xl font-bold text-[#f95a41]
+      <div className="flex justify-between items-center h-14 max-w-full: mx-auto px-4 bg-white text-black">
+        <h2 className="w-full text-2xl font-bold text-[#f95a41]">
           hardwarePasal
-        </h2>
-        </div> */}
-        <h2 className="w-full text-xl font-bold text-gray-500">
-          HardwarePasal
         </h2>
         <ul className="hidden md:flex font-medium">
           <li
@@ -89,7 +84,7 @@ const Navbar = () => {
 
         {/* <div className="mt-20"> */}
         {/* for small screen => responsiveness */}
-        <div className="flex md:hidden">
+        <div className="-mr-2 flex md:hidden">
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
@@ -116,40 +111,40 @@ const Navbar = () => {
           {/* <div className=""> */}
           {(ref) => (
             <div ref={ref} className="md:hidden">
-              <div className="flex flex-col fixed left-[-200px] bg-slate-200 mx-10 my-7 p-8 items-center justify-center">
+              <div className="pt-40 px-8 bg-black space-y-1 sm:px-3">
                 {/* px-2 pt-2 pb-3 space-y-1 sm:px-3 */}
                 <a
                   href="/"
-                  className="text-3xl pb-2 text-black"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900"
                 >
                   Home
                 </a>
                 <a
                   href="/about"
-                  className="text-3xl p-2 text-black"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
                 >
                   About
                 </a>
                 <a
                   href="/contact"
-                  className="text-3xl p-2 text-black"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
                 >
                   Contact
                 </a>
 
                 <a
-                  className={`text-3xl p-2 text-black ${
+                  className={`cursor-pointer p-4 text-sm font-semibold text-gray-400 ${
                     pathMatchRoute("/sign-in") || pathMatchRoute("/profile")
                   }`}
-                  // onClick={() => navigate("/profile")}
-                  href="/profile"
+                  onClick={() => navigate("/profile")}
+                  // href="/profile"
                 >
                   {pageState}
                 </a>
 
                 <a
                   href="/cart"
-                  className="text-3xl p-2 text-black"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700"
                 >
                   <i class="fa fa-shopping-cart" aria-hidden="true" />
                 </a>
