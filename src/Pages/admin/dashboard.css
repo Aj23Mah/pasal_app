@@ -1,0 +1,46 @@
+
+.dashboard_items {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+.revenue_box, .order_box, .products_box, .users_box{
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.revenue_box{
+    background: #fde5fb;
+}
+
+.products_box{
+    background: #ceebe9;
+}
+
+.order_box{
+    background: #e2f2b2;
+}
+
+.users_box{
+    background: #e2f2b2;
+}
+
+.revenue_box h5, .order_box h5, .products_box h5, .users_box h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #221b1b;
+    margin-bottom: 20px;
+}
+
+.revenue_box span, .order_box span, .products_box span, .users_box span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}

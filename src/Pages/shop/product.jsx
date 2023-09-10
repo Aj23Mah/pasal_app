@@ -1,19 +1,25 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../../context/shop-context';
+import React, { useContext } from "react";
+import { ShopContext } from "../../context/shop-context";
 
 export const Product = (props) => {
-    const {id, productName, price, productImage} = props.data;
-    const {addToCart, cartItems} = useContext(ShopContext);
+  const { id, productName, price, productImage } = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
 
-    const cartItemAmount = cartItems[id];
+  const cartItemAmount = cartItems[id];
   return (
-    <div className='product'>
-        <img src={productImage} alt='product-items' />
-        <div className='description'>
-            <p> <b>{productName}</b> </p>
-            <p> Rs.{price} </p>
-        </div>
-        <button className='addToCartBtn' onClick={() => addToCart(id)}> Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>} </button>
+    <div className="product">
+      <img src={productImage} alt="product-items" />
+      <p className="font-semibold text-center font-xl">{productName}</p>
+      <div className="flex justify-around m-2">
+        <p>price:</p>
+        <p> Rs.{price} </p>
+      </div>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 rounded"
+        onClick={() => addToCart(id)}
+      >
+        Add to Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}
+      </button>
     </div>
-  )
-}
+  );
+};

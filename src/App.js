@@ -16,8 +16,13 @@ import Error from "./hooks/Error";
 import { Shop } from "./Pages/shop/Shop";
 import { Cart } from "./Pages/cart/cart";
 // import Payment from "./Pages/payment/payment"
-import { Payment } from "./Pages/payment/payment";
+// import { Payment } from "./Pages/payment/Checkout";
 import { ShopContextProvider } from "./context/shop-context";
+
+import Checkout from "./Pages/payment/Checkout";
+import Dashboard from "./Pages/admin/Dashboard";
+import AddProducts from "./Pages/admin/AddProducts";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -29,12 +34,18 @@ const App = () => {
             <Route path="/" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             {/* <Route path="/payment" element={<Payment />} /> */}
-            <Route path="/payment" element={<Payment />} />
+            {/* <Route path="/payment" element={<Payment />} /> */}
+            <Route path="checkout" element={<Checkout />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/profile" element={<PrivateRoute />}>
               <Route path="/profile" element={<Profile />} />
+              {/* <Route path="checkout" element={<Checkout />} /> */}
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="dashboard/add-products" element={<AddProducts />} />
+              {/* <Route path="dashboard/all-products" element={<AllProducts />} />
+              <Route path="dashboard/users" element={<Users />} /> */}
             </Route>
 
             <Route path="/sign-in" element={<SignIn />} />
@@ -42,6 +53,7 @@ const App = () => {
             <Route path="/forget-password" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
         </Router>
         <ToastContainer
           position="bottom-center"

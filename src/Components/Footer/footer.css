@@ -1,0 +1,27 @@
+footer{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background: #0a1d37;
+    color: rgba(255, 255, 255, 0.735);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.text_area, .categories_area, .link_area, .contact_area{
+    width: 50%;
+    padding-top: 20px;
+}
+.categories_area h4, .link_area h4, .contact_area h4 {
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.categories_area ul li, .link_area ul li, .contact_area ul li {
+    font-size: 1.1rem;
+}
+.text_area p{
+    font-size: 1.1rem;
+    
+}
