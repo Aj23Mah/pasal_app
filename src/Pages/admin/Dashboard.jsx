@@ -1,9 +1,13 @@
 import React from 'react'
 import './dashboard.css'
+import AdminNav from './AdminNav'
 
 const Dashboard = () => {
   return (
     <section>
+      <>
+        <AdminNav />
+      </>
         <div className='dashboard_items'>
             <div className="revenue_box">
               <h5>Total Sales</h5>

@@ -5,7 +5,6 @@ import { Transition } from "@headlessui/react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import { useLocation, useNavigate } from "react-router-dom";
-// import logo from '../assets/logo1.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +37,7 @@ const Navbar = () => {
   return (
     // for fixed navbar => className="fixed h-14 w-[100%] m-auto z-10"
     <nav>
-      <div className="flex justify-between items-center h-14 max-w-[100%] mx-auto px-4 bg-white text-black">
+      <div className="flex justify-between items-center h-16 max-w-[100%] mx-auto px-4 bg-white text-black">
         {/* <div className="flex flex-row h-10 justify-center">
         <img src={logo} alt="Logo" className="" />
         <h2 className="text-xl font-bold text-[#6a47ba] justify-center items-center">
@@ -46,31 +45,31 @@ const Navbar = () => {
           hardwarePasal
         </h2>
         </div> */}
-        <h2 className="w-full text-xl font-bold text-gray-500">
+        <h2 className="w-full text-2xl font-bold text-gray-500">
           HardwarePasal
         </h2>
-        <ul className="hidden md:flex font-medium">
+        <ul className="hidden md:flex font-xl">
           <li
-            className="cursor-pointer p-6 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
+            className="cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
             onClick={() => navigate("/")}
+          >
+            Home
+          </li>
+          <li
+            className="cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
+            onClick={() => navigate("/shop")}
           >
             Shop
           </li>
-          <li
-            className="cursor-pointer p-6 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
-            onClick={() => navigate("/about")}
-          >
-            About
-          </li>
 
           <li
-            className="cursor-pointer p-6 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
+            className="cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
             onClick={() => navigate("/contact")}
           >
             Contact
           </li>
           <li
-            className={`cursor-pointer p-6 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500 ${
+            className={`cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500 ${
               pathMatchRoute("/sign-in") || pathMatchRoute("/profile")
             }
               
@@ -80,7 +79,7 @@ const Navbar = () => {
             {pageState}
           </li>
           <li
-            className="cursor-pointer p-6 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
+            className="cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
             onClick={() => navigate("/cart")}
           >
             <i class="fa fa-shopping-cart" aria-hidden="true" />
@@ -116,24 +115,15 @@ const Navbar = () => {
           {/* <div className=""> */}
           {(ref) => (
             <div ref={ref} className="md:hidden">
-              <div className="flex flex-col fixed left-[-200px] bg-slate-200 mx-10 my-7 p-8 items-center justify-center">
+              <div className="flex flex-col fixed left-[-200px] bg-slate-200 mx-10 my-7 p-8 items-center justify-center z-50">
                 {/* px-2 pt-2 pb-3 space-y-1 sm:px-3 */}
-                <a
-                  href="/"
-                  className="text-3xl pb-2 text-black"
-                >
+                <a href="/" className="text-3xl pb-2 text-black">
                   Home
                 </a>
-                <a
-                  href="/about"
-                  className="text-3xl p-2 text-black"
-                >
-                  About
+                <a href="/shop" className="text-3xl pb-2 text-black">
+                  Shop
                 </a>
-                <a
-                  href="/contact"
-                  className="text-3xl p-2 text-black"
-                >
+                <a href="/contact" className="text-3xl p-2 text-black">
                   Contact
                 </a>
 
@@ -147,10 +137,7 @@ const Navbar = () => {
                   {pageState}
                 </a>
 
-                <a
-                  href="/cart"
-                  className="text-3xl p-2 text-black"
-                >
+                <a href="/cart" className="text-3xl p-2 text-black">
                   <i class="fa fa-shopping-cart" aria-hidden="true" />
                 </a>
               </div>

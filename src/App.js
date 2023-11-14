@@ -22,7 +22,9 @@ import { ShopContextProvider } from "./context/shop-context";
 import Checkout from "./Pages/payment/Checkout";
 import Dashboard from "./Pages/admin/Dashboard";
 import AddProducts from "./Pages/admin/AddProducts";
+import AllProducts from "./Pages/admin/AllProducts";
 import Footer from "./Components/Footer/Footer";
+import Home from "./Pages/home/Home";
 
 const App = () => {
   return (
@@ -31,7 +33,8 @@ const App = () => {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Shop />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/cart" element={<Cart />} />
             {/* <Route path="/payment" element={<Payment />} /> */}
             {/* <Route path="/payment" element={<Payment />} /> */}
@@ -44,8 +47,8 @@ const App = () => {
               {/* <Route path="checkout" element={<Checkout />} /> */}
               <Route path="dashboard" element={<Dashboard />} />
               <Route path="dashboard/add-products" element={<AddProducts />} />
-              {/* <Route path="dashboard/all-products" element={<AllProducts />} />
-              <Route path="dashboard/users" element={<Users />} /> */}
+              <Route path="dashboard/all-products" element={<AllProducts />} />
+              {/* <Route path="dashboard/users" element={<Users />} /> */}
             </Route>
 
             <Route path="/sign-in" element={<SignIn />} />

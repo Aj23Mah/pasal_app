@@ -15,6 +15,8 @@ export const Shop = (props) => {
     setSelectedCategory(event.target.value);
   };
 
+  
+
   return (
     <div className="shop-section">
       <div className="mt-4 mb-6 text-center text-black text-3xl font-semibold">
@@ -56,6 +58,10 @@ export const Shop = (props) => {
             <Product key={product.id} data={product} />
           ))}
         </div>
+
+       
+
+
       </div>
     </div>
   );

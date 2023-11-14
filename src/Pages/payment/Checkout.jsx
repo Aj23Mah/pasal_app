@@ -75,6 +75,7 @@ const { totalQty, totalAmount } = location.state || {};
             <button className="buy_btn auth_btn w-100 border-2 bg-transparent text-white p-1">
               place an order
             </button>
+
           </div>
         </Col>
         {/* </Row> */}

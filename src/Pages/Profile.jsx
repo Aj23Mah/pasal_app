@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { db } from "../firebase";
+import AdminNav from "./admin/AdminNav";
 
 export default function Profile() {
   const auth = getAuth();
@@ -46,6 +47,7 @@ export default function Profile() {
   return (
     <>
       <section className="max-w-6xl mx-auto flex justify-center items-center flex-col">
+        <AdminNav />
         <h1 className="text-3xl text-center mt-6 font-bold">My Profile</h1>
         <div className="w-full md:w-[50%] mt-6 px-3">
           <form>

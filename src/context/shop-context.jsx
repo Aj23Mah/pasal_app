@@ -1,5 +1,7 @@
 import React, { createContext, useState } from 'react'
 import { PRODUCTS } from '../product';
+import { ApiAddProducts } from '../API/Product';
+import { APIUploadImage } from '../API/Storages';
 
 
 export const ShopContext = createContext({});
@@ -48,12 +50,21 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: newAmount}));
     };
 
+    const addProduct =async (product) =>{
+        const image =await APIUploadImage(product.productImage);
+       await ApiAddProducts({
+        ...product,
+        productImage:image
+       });
+    }
+
     const contextValue = {
         cartItems, 
         addToCart, 
         removeFromCart, 
         updateCartItemCount,
         getTotalCartAmount,
+        addProduct,
         getTotalCartQuantity,
     };
     
