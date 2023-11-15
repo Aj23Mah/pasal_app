@@ -40,33 +40,34 @@ const Clock = () => {
   return (
     <div className="flex items-center gap-3">
       <div className="flex items-center gap-3">
-        <div className="text-center lg:text-2xl md:text-lg text-md font-semibold">
-          <h1 className="text-white mb-2">{days}</h1>
-          <h5 className="text-white">Days</h5>
+        <div className="text-center">
+        {/* text-center lg:text-2xl md:text-lg text-md font-semibold */}
+          <h1 className="text-white mb-2 lg:text-4xl text-xl">{days}</h1>
+          <h5 className="text-white lg:text-2xl text-lg">Days</h5>
         </div>
         <span className="text-white ">:</span>
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="text-center lg:text-2xl md:text-lg text-md font-semibold">
-          <h1 className="text-white mb-2">{hours}</h1>
-          <h5 className="text-white">Hours</h5>
+        <div className="text-center">
+          <h1 className="text-white mb-2 lg:text-4xl text-xl">{hours}</h1>
+          <h5 className="text-white lg:text-2xl text-lg">Hours</h5>
         </div>
         <span className="text-white ">:</span>
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="text-center lg:text-2xl md:text-lg text-md font-semibold">
-          <h1 className="text-white mb-2">{minutes}</h1>
-          <h5 className="text-white">Minutes</h5>
+        <div className="text-center">
+          <h1 className="text-white mb-2 lg:text-4xl text-xl">{minutes}</h1>
+          <h5 className="text-white lg:text-2xl text-lg">Minutes</h5>
         </div>
         <span className="text-white ">:</span>
       </div>
 
       <div className="flex items-center gap-3">
-        <div className="text-center lg:text-2xl md:text-lg text-md font-semibold">
-          <h1 className="text-white mb-2">{seconds}</h1>
-          <h5 className="text-white">Seconds</h5>
+        <div className="text-center">
+          <h1 className="text-white mb-2 lg:text-4xl text-xl">{seconds}</h1>
+          <h5 className="text-white lg:text-2xl text-lg">Seconds</h5>
         </div>
       </div>
     </div>

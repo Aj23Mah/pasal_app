@@ -6,6 +6,7 @@ import NewItems from "./NewItems";
 import Clock from "./Clock";
 
 import pprImg from "../../assets/ppr_pipe-removebg-preview.png";
+import Testomonial from './../Testomonial/Testomonial';
 
 const Home = () => {
   return (
@@ -40,7 +41,7 @@ const Home = () => {
 
       <NewItems />
 
-      <section className="flex py-5 lg:px-28 md:px-20 px-5 justify-between bg-slate-900">
+      <section className="flex md:justify-between justify-center py-5 bg-slate-900 lg:px-28 lg:py-10 md:px-12 md:py-8 sm:px-5 sm:py-5">
         <div className="count_down-col">
           <div className="clock_top-content">
             <h4 className="text-white fs-6 mb-2">New year Offers</h4>
@@ -51,7 +52,7 @@ const Home = () => {
           <Link to="/shop">
             <motion.button
               whileTap={{ scale: 1.2 }}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-800 text-white text-lg rounded"
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-800 text-white md:text-lg text-base rounded"
             >
               Visit Store
             </motion.button>
@@ -70,6 +71,8 @@ const Home = () => {
         </div>
       </section>
 
+      <Testomonial />
+      
       <section></section>
     </>
   );

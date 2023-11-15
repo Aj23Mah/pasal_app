@@ -61,8 +61,7 @@ footer {
   }
   .text_area,
   .categories_area,
-  .link_area,
-  .contact_area {
+  .link_area,  .contact_area {
     padding-top: 1px;
   }
 }

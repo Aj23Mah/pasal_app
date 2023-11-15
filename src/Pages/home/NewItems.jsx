@@ -63,7 +63,7 @@ const NewItems = () => {
                 <p>price:</p>
                 <p> Rs.{v.price} </p>
               </div>
-              <button className="px-5 py-2 bg-blue-600 hover:bg-blue-800 text-white text-lg rounded">Add to Cart</button>
+              <button className="md:px-5 py-2 px-3 bg-blue-600 hover:bg-blue-800 text-white md:text-lg text-sm rounded">Add to Cart</button>
               {/* <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 rounded"
                   onClick={() => addToCart(id)}

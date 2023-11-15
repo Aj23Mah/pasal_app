@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+// import logo from '../assets/logo1.png'
+import logo from '../assets/hardware-shop-high-resolution-logo-transparent.png'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Transition } from "@headlessui/react";
 // Importing icons from react-icons/fa module
@@ -45,9 +47,11 @@ const Navbar = () => {
           hardwarePasal
         </h2>
         </div> */}
-        <h2 className="w-full text-2xl font-bold text-gray-500">
-          HardwarePasal
-        </h2>
+        <div className=" flex items-center w-full text-2xl font-bold text-gray-500">
+          <img src={logo} style={{ width: "80px"}} alt="" />
+          <div className="hidden sm:block">HardwarePasal</div>
+          {/* <img src={logo} style={{ width: "50px"}} alt="" /> */}
+        </div>
         <ul className="hidden md:flex font-xl">
           <li
             className="cursor-pointer px-6 py-2 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent border-b-red-500 hover:text-black hover:border-b-red-500 active:text-black active:border-b-red-500"
